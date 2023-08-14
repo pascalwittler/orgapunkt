@@ -52,3 +52,22 @@ The following response definitions will only detail the expected value of the `d
   ...
 ]
 ```
+
+### Show single employee
+
+**Definition**
+
+`GET /employee/<identifier>`
+
+**Responses**
+
+* `200 OK` on success
+
+```json
+{
+  "identifier": "pw",
+  "firstName": "Pascal",
+  "lastName": "Wittler",
+  "email": "pw@derpunkt.de"
+}
+```
