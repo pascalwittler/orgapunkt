@@ -99,3 +99,14 @@ If an employee with the given identifier already exists, it will be overwritten.
   "email": "pw@derpunkt.de"
 }
 ```
+
+### Remove an employee
+
+**Definition**
+
+`DELETE /employee/<identifier>`
+
+**Responses**
+
+* `204 No Content` on success
+* `404 Not Found` if the employee does not exist
