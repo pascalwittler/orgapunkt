@@ -37,7 +37,17 @@ class EmployeeList(Resource):
 
         return {'message': 'Success', 'data': employees}, 200
 
+class Employee(Resource):
+    def get(self, identifier):
+        shelf = get_db('data/employees.db')
+
+        if not (identifier in shelf):
+            return {'message': 'Employee not found', 'data': {}}, 404
+
+        return {'message': 'Employee found', 'data': shelf[identifier]}, 200
+
 api.add_resource(EmployeeList, '/employees')
+api.add_resource(Employee, '/employee/<string:identifier>')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=2342, debug=True)
