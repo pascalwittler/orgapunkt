@@ -2,6 +2,10 @@
 
 ## About this project
 
+### History & Context
+
+In the long term, this project should replace many manual steps that are necessary in my company when creating new accounts for new employees. It is a central collection of data about employees and teams, which can then be imported or processed in various applications and tools that exist in the company.
+
 ### Features
 
 * Employee data management (in progress)
