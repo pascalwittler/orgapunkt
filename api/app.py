@@ -37,6 +37,21 @@ class EmployeeList(Resource):
 
         return {'message': 'Success', 'data': employees}, 200
 
+    def post(self):
+        parser = reqparse.RequestParser()
+
+        parser.add_argument('identifier', required = True)
+        parser.add_argument('firstName', required = True)
+        parser.add_argument('lastName', required = True)
+        parser.add_argument('email', required = True)
+
+        args = parser.parse_args()
+
+        shelf = get_db('data/employees.db')
+        shelf[args['identifier']] = args
+
+        return {'message': 'Employee added', 'data': args}, 201
+
 class Employee(Resource):
     def get(self, identifier):
         shelf = get_db('data/employees.db')
