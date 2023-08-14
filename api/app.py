@@ -61,6 +61,15 @@ class Employee(Resource):
 
         return {'message': 'Employee found', 'data': shelf[identifier]}, 200
 
+    def delete(self, identifier):
+        shelf = get_db('data/employees.db')
+
+        if not (identifier in shelf):
+            return {'message': 'Employee not found', 'data': {}}, 404
+
+        del shelf[identifier]
+        return {'message': 'Employee deleted', 'data': {}}, 204
+
 api.add_resource(EmployeeList, '/employees')
 api.add_resource(Employee, '/employee/<string:identifier>')
 
