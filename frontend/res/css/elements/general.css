@@ -6,3 +6,7 @@
   box-sizing: border-box;
 }
 
+body {
+  color: var(--color-text-main);
+  background-color: var(--color-background-main);
+}

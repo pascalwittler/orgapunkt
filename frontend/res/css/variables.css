@@ -1,3 +1,6 @@
 html {
+  --color-background-main: #222222;
+  --color-text-main: #ffffff;
+
   --font-family: 'Inter';
 }
