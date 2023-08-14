@@ -25,5 +25,19 @@ def teardown_db(exception):
 def index():
     return {'message': 'Hello world!', 'data': {}}, 200
 
+class EmployeeList(Resource):
+    def get(self):
+        shelf = get_db('data/employees.db')
+        keys = list(shelf.keys())
+
+        employees = []
+
+        for key in keys:
+            employees.append(shelf[key])
+
+        return {'message': 'Success', 'data': employees}, 200
+
+api.add_resource(EmployeeList, '/employees')
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=2342, debug=True)
