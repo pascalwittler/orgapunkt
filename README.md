@@ -1,5 +1,15 @@
 # SchnittPunkt
 
+## About this project
+
+### Features
+
+* Employee data management (in progress)
+* Team data management (in progress)
+* Simple web frontend without any framework or library
+* Python (Flask) REST API and backend
+* No database server required
+
 ## Get started
 
 ### Installation
