@@ -71,3 +71,31 @@ The following response definitions will only detail the expected value of the `d
   "email": "pw@derpunkt.de"
 }
 ```
+
+### Add or update a new employee
+
+**Definition**
+
+`POST /employees`
+
+**Arguments**
+
+* `"identifier":string` the initials of the employee as a globally unique identifier
+* `"firstName":string` the first name of the employee
+* `"lastName":string` the last name of the employee
+* `"email":string` the email address of the employee
+
+If an employee with the given identifier already exists, it will be overwritten.
+
+**Responses**
+
+* `201 Created` on success
+
+```json
+{
+  "identifier": "pw",
+  "firstName": "Pascal",
+  "lastName": "Wittler",
+  "email": "pw@derpunkt.de"
+}
+```
