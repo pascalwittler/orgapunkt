@@ -30,3 +30,25 @@ All responses will have the form
 ```
 
 The following response definitions will only detail the expected value of the `data` field.
+
+### List all employees
+
+**Definition**
+
+`GET /employees`
+
+**Responses**
+
+* `200 OK` on success
+
+```json
+[
+  {
+    "identifier": "pw",
+    "firstName": "Pascal",
+    "lastName": "Wittler",
+    "email": "pw@derpunkt.de"
+  },
+  ...
+]
+```
