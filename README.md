@@ -53,7 +53,7 @@ The following response definitions will only detail the expected value of the `d
 ]
 ```
 
-### Show single employee
+### Show a single employee
 
 **Definition**
 
