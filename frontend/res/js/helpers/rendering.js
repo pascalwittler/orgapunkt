@@ -17,7 +17,7 @@ export class Rendering {
   }
 
   switchVisibleSection() {
-    const sections = document.body.querySelector(`section[data-module][data-action]`);
+    const sections = document.body.querySelectorAll(`section[data-module][data-action]`);
 
     sections.forEach((section) => {
       if (section.dataset.module === this.module && section.dataset.action === this.action) {
