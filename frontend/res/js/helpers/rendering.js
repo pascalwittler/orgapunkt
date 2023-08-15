@@ -20,7 +20,10 @@ export class Rendering {
     const sections = document.body.querySelectorAll(`section[data-module][data-action]`);
 
     sections.forEach((section) => {
-      if (section.dataset.module === this.module && section.dataset.action === this.action) {
+      if (
+        section.dataset.module === this.module.toLowerCase()
+        && section.dataset.action === this.action.toLowerCase()
+      ) {
         this.show(section);
       }
       else {
