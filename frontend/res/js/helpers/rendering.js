@@ -1,3 +1,6 @@
+import { Navigation } from '../modules/navigation.js';
+import { Employee } from '../modules/employee.js';
+
 export class Rendering {
   constructor(module, action) {
     this.module = module;
