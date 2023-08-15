@@ -15,4 +15,17 @@ export class Rendering {
   hide(domElement) {
     domElement.setAttribute('hidden', '');
   }
+
+  switchVisibleSection() {
+    const sections = document.body.querySelector(`section[data-module][data-action]`);
+
+    sections.forEach((section) => {
+      if (section.dataset.module === this.module && section.dataset.action === this.action) {
+        this.show(section);
+      }
+      else {
+        this.hide(section);
+      }
+    });
+  }
 }
