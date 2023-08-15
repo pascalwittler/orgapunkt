@@ -13,4 +13,20 @@ h5,
 h6 {
   font-weight: 600;
 }
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
