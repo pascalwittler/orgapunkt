@@ -2,6 +2,8 @@ export class Rendering {
   constructor(module, action) {
     this.module = module;
     this.action = action;
+
+    this.switchVisibleSection();
   }
 
   insertHtml(wrapper, htmlContent) {
