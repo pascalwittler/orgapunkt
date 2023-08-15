@@ -4,6 +4,7 @@ html {
 
   --font-family: 'Inter';
 
+  --content-width: 1280px;
   --content-margin: 24px;
   --content-margin-half: calc(var(--content-margin) / 2);
   --content-margin-double: calc(var(--content-margin) * 2);
