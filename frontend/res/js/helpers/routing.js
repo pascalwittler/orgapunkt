@@ -1,5 +1,9 @@
 export class Routing {
   ROUTES = {
+    '/': {
+      module: 'Navigation',
+      action: 'navigate',
+    },
     '/employees/': {
       module: 'Employee',
       action: 'list',
