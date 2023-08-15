@@ -6,6 +6,7 @@ export class Rendering {
     this.module = module;
     this.action = action;
 
+    this.executeAction();
     this.switchVisibleSection();
   }
 
@@ -19,6 +20,10 @@ export class Rendering {
 
   hide(domElement) {
     domElement.setAttribute('hidden', '');
+  }
+
+  executeAction() {
+    (eval('new ' + (this.module) + '()'))[this.action]();
   }
 
   switchVisibleSection() {
