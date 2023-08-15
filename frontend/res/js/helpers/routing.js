@@ -25,4 +25,12 @@ export class Routing {
   constructor() {
     this.route = window.location.pathname.replace(/\/?$/, '/');
   }
+
+  get module() {
+    return this.ROUTES[this.route].module;
+  }
+
+  get action() {
+    return this.ROUTES[this.route].action;
+  }
 }
