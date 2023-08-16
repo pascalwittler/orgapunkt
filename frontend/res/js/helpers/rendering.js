@@ -10,8 +10,12 @@ export class Rendering {
     this.switchVisibleSection();
   }
 
-  insertHtml(wrapper, htmlContent) {
-    wrapper.innerHTML = htmlContent;
+  static clearHtml(wrapper) {
+    wrapper.innerHTML = '';
+  }
+
+  static insertHtml(wrapper, htmlContent) {
+    wrapper.innerHTML += htmlContent;
   }
 
   static show(domElement) {
