@@ -1,19 +1,19 @@
 import { Api } from '../helpers/api.js';
 
 export class Employee {
-  list() {
+  async list() {
 
   }
 
-  add() {
+  async add() {
 
   }
 
-  edit() {
+  async edit() {
 
   }
 
-  delete() {
+  async delete() {
 
   }
 }
