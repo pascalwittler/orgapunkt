@@ -1,0 +1,6 @@
+section {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: auto;
+  row-gap: var(--content-margin);
+}
