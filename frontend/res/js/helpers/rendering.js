@@ -14,11 +14,11 @@ export class Rendering {
     wrapper.innerHTML = htmlContent;
   }
 
-  show(domElement) {
+  static show(domElement) {
     domElement.removeAttribute('hidden');
   }
 
-  hide(domElement) {
+  static hide(domElement) {
     domElement.setAttribute('hidden', '');
   }
 
@@ -34,10 +34,10 @@ export class Rendering {
         section.dataset.module === this.module.toLowerCase()
         && section.dataset.action === this.action.toLowerCase()
       ) {
-        this.show(section);
+        this.constructor.show(section);
       }
       else {
-        this.hide(section);
+        this.constructor.hide(section);
       }
     });
   }
