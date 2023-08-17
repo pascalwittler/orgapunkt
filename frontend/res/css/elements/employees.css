@@ -1,0 +1,25 @@
+.employees {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: auto;
+  row-gap: var(--content-margin-half);
+  list-style-type: none;
+}
+
+.employees .employee {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+  column-gap: var(--content-margin);
+}
+
+.employees .employee span {
+  display: block;
+}
+
+.employees .employee .controls {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: var(--content-margin-half);
+}
