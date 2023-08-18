@@ -1,12 +1,12 @@
 version: "3"
 services:
-  schnittpunkt-frontend:
+  orgapunkt-frontend:
     build: ./frontend
     volumes:
       - ./frontend:/usr/local/apache2/htdocs
     ports:
       - 7891:80
-  schnittpunkt-api:
+  orgapunkt-api:
     build: ./api
     volumes:
       - ./api:/usr/src/app
