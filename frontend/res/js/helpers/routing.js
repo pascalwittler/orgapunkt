@@ -1,26 +1,31 @@
 export class Routing {
-  ROUTES = {
-    '/': {
+  ROUTES = [
+    {
+      path: /^\/$/,
       module: 'Navigation',
       action: 'navigate',
     },
-    '/employees/': {
+    {
+      path: /^\/employees\/$/,
       module: 'Employee',
       action: 'list',
     },
-    '/employee/add/': {
+    {
+      path: /^\/employee\/add\/$/,
       module: 'Employee',
       action: 'add',
     },
-    '/employee/edit/': {
+    {
+      path: /^\/employee\/[a-z]{2,3}\/edit\/$/,
       module: 'Employee',
       action: 'edit',
     },
-    '/employee/delete/': {
+    {
+      path: /^\/employee\/[a-z]{2,3}\/delete\/$/,
       module: 'Employee',
       action: 'delete',
     },
-  };
+  ];
 
   constructor() {
     this.route = window.location.pathname.replace(/\/?$/, '/');
