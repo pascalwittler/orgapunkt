@@ -32,10 +32,14 @@ export class Routing {
   }
 
   get module() {
-    return this.ROUTES[this.route].module;
+    return this.findRoute().module;
   }
 
   get action() {
-    return this.ROUTES[this.route].action;
+    return this.findRoute().action;
+  }
+
+  findRoute() {
+    return this.ROUTES.find(possibleRoute => possibleRoute.path.test(this.route));
   }
 }
