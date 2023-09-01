@@ -1,0 +1,32 @@
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  row-gap: var(--content-gap);
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  row-gap: calc(var(--content-gap) / 4);
+}
+
+form input {
+  display: block;
+  border: 2px solid var(--color-text-main);
+  padding: calc(var(--content-gap) / 2) calc(var(--content-gap) / 3);
+  color: var(--color-text-main);
+  background-color: var(--color-background-main);
+  font-weight: 600;
+  appearance: none;
+}
+
+form input[type='submit'] {
+  color: var(--color-background-main);
+  background-color: var(--color-text-main);
+  cursor: pointer;
+}
