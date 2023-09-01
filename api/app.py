@@ -45,6 +45,8 @@ class EmployeeList(Resource):
         parser.add_argument('lastName', required = True)
         parser.add_argument('email', required = True)
         parser.add_argument('birthday', required = True)
+        parser.add_argument('firstDayOfEmployment', required = True)
+        parser.add_argument('lastDayOfEmployment', required = True)
 
         args = parser.parse_args()
 
