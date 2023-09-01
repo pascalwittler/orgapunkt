@@ -11,7 +11,7 @@ export class Routing {
       action: 'list',
     },
     {
-      path: /^\/employee\/add\/$/,
+      path: /^\/employees\/add\/$/,
       module: 'Employee',
       action: 'add',
     },
