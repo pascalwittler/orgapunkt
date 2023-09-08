@@ -28,7 +28,31 @@ export class Employee {
   }
 
   async add() {
+    const sectionDomElement = document.querySelector('section[data-module="employee"][data-action="add"]');
+    const form = sectionDomElement.querySelector('form');
 
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const employeeData = {
+        'identifier': form.querySelector('[name="identifier"]').value ?? '',
+        'firstName': form.querySelector('[name="firstName"]').value ?? '',
+        'lastName': form.querySelector('[name="lastName"]').value ?? '',
+        'email': form.querySelector('[name="email"]').value ?? '',
+        'birthday': form.querySelector('[name="birthday"]').value ?? '',
+        'firstDayOfEmployment': form.querySelector('[name="firstDayOfEmployment"]').value ?? '',
+        'lastDayOfEmployment': form.querySelector('[name="lastDayOfEmployment"]').value ?? '',
+      };
+
+      const api = new Api();
+      api.sendRequest(
+        '/employees',
+        employeeData,
+        'post'
+      );
+
+      location.assign('/employees');
+    });
   }
 
   async edit() {
